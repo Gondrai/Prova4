@@ -20,7 +20,7 @@ body{
 header{
 	background-color:#123e3b;
 	height: 110px;
-	padding:20px 50px;
+	padding:30px 60px 40px;
 }
 
 
@@ -62,13 +62,13 @@ img{
 }
 
 #menu{
-	margin-top:40px;
+	margin-top:30px;
 	float:right;
 	text-align: right;
 }
 
 #menu a{
-	padding:20px 30px;
+	padding:30px 20px;
 	text-decoration: none;
 	color:#FFFFFF;
 	text-shadow: 1px 1px #111111;
