@@ -47,21 +47,18 @@ last lista =
 vdd : Int -> Int -> String
 vdd x y = if x == y then "RG Válido" else "RG Inválido"
 
-listmult : List Int -> Int
-listmult lista =
-    let
-        n = 8
-    in
+listmult : List Int -> Int -> Int
+listmult lista n =
     case lista of
     [] -> 0
     [x] -> 0
-    x::xs -> remainderBy 11 ((x*n + (listmult xs))//11) 
+    x::xs -> remainderBy 11 ((x*n + (listmult xs n-1))//11) 
 
 update : Msg -> Model -> Model
 update msg model =
   case msg of
     A x1 -> { model | a = x1}
-    Calcular -> {model | resultado =vdd (listmult(toint(tomaybe(split model.a)))) (last(toint(tomaybe(split model.a))))}
+    Calcular -> {model | resultado =vdd (listmult(toint(tomaybe(split model.a)))8) (last(toint(tomaybe(split model.a))))}
     Resultado result -> {model | resultado = result} 
 
 -- VIEW
