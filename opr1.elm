@@ -32,8 +32,7 @@ update msg model =
   case msg of
     Input1 valor -> {model | i1 = (padraoI valor)}
     Input2 valor -> {model | i2 = (padraoI valor)}
-    AreaRetangulo -> {model | resultado = (if model.i1 < model.i2 then model.i1
-      else resto (model.i1-model.i2) model.i2)}
+    AreaRetangulo -> {model | resultado = ( model.i1*model.i2)}
                 
 buttonStyle : List (Attribute msg) 
 buttonStyle = [ style "color" "#ffffff" , style "width" "150px" , style "font-weight" "bold" , style "font-size" "", style "background-color" "#bf2f80"]
